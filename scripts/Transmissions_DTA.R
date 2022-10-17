@@ -34,7 +34,24 @@ branch_info <- branches %>% left_join(node_numbers, by= c("parent_num" = "num"))
   rename(child_population = population, child_confidence = confidence, child_date = date) %>% 
   unite("pops", c("parent_population", "child_population")) 
 
+# Identify transmissions from University to Community (UtoC) and Community to University (CtoU)
+UtoC <- branch_info %>% filter(pops == "University_Community")
+CtoU <- branch_info %>% filter(pops == "Community_University")
+
+# Identify between-population transmissions that lead to phylogenetic singletons
+# These are characterized by a child node that is a tip (not a node with descendants)
+
+UtoC_singletons <- UtoC %>% filter(!grepl("NODE_", child_name))
+CtoU_singletons <- CtoU %>% filter(!grepl("NODE_", child_name))
 
 ## Filter parent & child nodes with confidence values >= 0.8
 branch_info_conf80 <- branch_info %>% filter(parent_confidence >= 0.8) %>% filter(child_confidence >= 0.8)
+
+UtoC_conf80 <- branch_info_conf80 %>% filter(pops == "University_Community")
+CtoU_conf80 <- branch_info_conf80 %>% filter(pops == "Community_University")
+
+UtoC_singletons_conf80 <- UtoC_conf80 %>% filter(!grepl("NODE_", child_name))
+CtoU_singletons_conf80 <- CtoU_conf80 %>% filter(!grepl("NODE_", child_name))
+
+
 
