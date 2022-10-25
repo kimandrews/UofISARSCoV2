@@ -14,7 +14,7 @@ This phylogenetic tree was created using SARS-CoV-2 genome sequences for samples
 # [Between-population transmission](https://nextstrain.org/community/kimandrews/UofISARSCoV2/UofI-2020-2021-AcademicYear?d=tree&f_population=Community,University&legend=open)
 The places on the tree where the branch color changes from one population to another represent viral transmission between those populations. Most transmissions occurred within populations rather than between populations, indicating minimal viral spread between the Community and University throughout the academic year.
 
-# [New introductions](http://localhost:4000/UofISARSCoV2_2020-2021-AcademicYear?d=tree&c=introduction_usher&f_population=Community,University&legend=closed)
+# [New introductions](https://nextstrain.org/community/kimandrews/UofISARSCoV2/UofI-2020-2021-AcademicYear?d=tree&c=introduction_usher&f_population=Community,University&legend=closed)
 New introductions of viruses from outside regions can be the starting point for viral spread within a population. We identified about 200 introductions into our study populations, but only 12 of those introductions led to large numbers of infections (i.e., led to > 10 infected individuals in our dataset). Here the descendants of these 12 introductions are highlighted in color. 
 
 We found more introductions in the Fall than Spring semester, and the Fall introductions tended to leave more descendants over a longer period of time. This indicates more viral spread in the Fall not only from outside our study populations, but also within our study populations. 
